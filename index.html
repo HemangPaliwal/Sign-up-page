@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+<script type="text/javascript">
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+});
+</script>
+<link rel="stylesheet" type="text/css" href="index.css">
+
+</head>
+<body>
+<div id="content" class="row">
+	<div class="col-md-4 col-sm-6 col-xs-12" id="text" >
+		<div id="heading">
+			<br>
+			<span>Learn to code by</span>
+			<span style="display: block;">watching others</span>
+		</div>
+		<div id="summary" >
+			<span style="display: block; color: white;margin-bottom: 5px;">See how experienced developers solve problems in real-time.</span>
+			<span style="display: block; color: white;margin-bottom: 5px;">Watching scripted tutorials is great,but understanding how</span>
+			<span style="display: block; color: white;">developers think is invaluable</span><br>
+		</div>
+	</div>
+
+
+	<div class="col-md-4 col-sm-6 col-xs-12">
+		
+		<div id="trial" class="form-items">
+			<strong>Try it free 7 days</strong> <span style="color: #e8e8e8">then $20/mo. thereafter</span>
+		</div>
+		<br>
+		<div id="form">
+			<form class="form-block" name="myform" ng-app="myApp" ng-controller="myCtrl" novalidate>
+				
+				<div class="form-group">
+
+					<div class="col-xs-12 form-items">
+						<input class="form-control input-lg" placeholder="First Name" type="text"
+						name="name" height="40" ng-model="name" required>
+						<p style="color:red;font-size: 16px;"ng-show="myform.name.$error.required&&
+						myform.name.$dirty && myform.name.$invalid">This field is required</p>
+					</div>
+
+					<div class="col-xs-12 form-items">
+						<input class="form-control input-lg" placeholder="Last Name" type="text"
+						name="last_name" ng-model="last_name" required>
+						<p style="color:red;font-size: 16px;"ng-show="myform.last_name.$error.required&&
+						myform.last_name.$dirty && myform.last_name.$invalid">This field is required</p>
+					</div>
+
+					<div class="col-xs-12 form-items">
+						<input class="form-control input-lg" placeholder="Email Address" type="email"
+						name="email" ng-model="email" required>
+						<p style="color:red" ng-show="myform.email.$dirty && myform.email.$invalid">
+							<span style="font-size: 16px;" ng-show="myform.email.$error.required">This field is
+							required</span>
+							<span style="font-size: 16px;" ng-show="myform.email.$error.email">Please enter a valid email
+							address</span>
+						</p>
+					</div>
+
+					<div class="col-xs-12 form-items">
+						<input class="form-control input-lg" placeholder="Password" type="text"
+						name="password" ng-model="password"required>
+						<p style="color:red" ng-show="myform.password.$dirty && myform.password.$invalid">
+							<span style="font-size: 16px;" ng-show="myform.password.$error.required">This field is
+							required</span>
+						</p>
+					</div>
+
+					<div class="col-xs-24 form-items" style="margin-left: 21px;">
+						<input type="button"class="form-control input-lg btn btn-success" value="CLAIM YOUR FREE TRIAL"> 
+					</div>
+					<div class="col-xs-12 form-items" style=" text-align: center;">
+						<span style="font-size: 10px;font-family: sans-serif;color:#bfbbbb ">By clicking the button you are agreeing to our <strong style="color: red">Terms and Services</strong></span>
+				</div>
+			</form>
+		</div>
+		<br>
+	</div>
+</div>
+</body>
+</html>
